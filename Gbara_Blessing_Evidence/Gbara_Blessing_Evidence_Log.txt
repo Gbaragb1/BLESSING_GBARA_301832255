@@ -1,0 +1,12 @@
+================================================================================
+PAYBRIDGE EVIDENCE & LOGGING AUDIT TRAIL
+Student: Blessing Gbara (301832255)
+Course: MIT 8103 - Advanced Database Systems
+================================================================================
+
+This audit trail logs all empirical evidence generated for Portfolios 1 through 5:
+- Portfolio 1: PostgreSQL DDL deployed with 8 tables; balanced journal trigger validated.
+- Portfolio 2: 4 queries profiled on 300,000 ledger records using EXPLAIN (ANALYZE, BUFFERS); speedups between 85.5% and 95.1%.
+- Portfolio 3: Dual-session locking (SELECT ... FOR UPDATE) proved double-spend rejection and idempotency.
+- Portfolio 4: 25-document JSON dataset verified via Python MQL aggregation engine.
+- Portfolio 5: Streaming replication configs and 2PC failure coordinator tested and confirmed.

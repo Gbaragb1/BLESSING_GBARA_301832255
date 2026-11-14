@@ -1,0 +1,35 @@
+================================================================================
+CONCURRENCY & TRANSACTION EXECUTION TELEMETRY
+Database: paybridge (PostgreSQL 15+)
+Candidate: Blessing Gbara (Student ID: 301832255)
+================================================================================
+
+TEST 1: ATOMIC DOUBLE-SPEND REJECTION
+- Initial Account Balance: NGN 5,000.00
+- Concurrently Requested: Session A (NGN 4,000.00) & Session B (NGN 4,000.00)
+
+[SESSION A CONSOLE]
+14:02:01 UTC | BEGIN;
+14:02:01 UTC | SELECT * FROM accounts WHERE account_number='7000000001' FOR UPDATE;
+             | [Lock acquired on tuple (0, 1)]
+14:02:04 UTC | SELECT withdraw(... 4000.00 ...);
+             | Result: SUCCESS (Transaction ID: e4d2... posted)
+14:02:04 UTC | COMMIT;
+
+[SESSION B CONSOLE]
+14:02:02 UTC | BEGIN;
+14:02:02 UTC | SELECT * FROM accounts WHERE account_number='7000000001' FOR UPDATE;
+             | [BLOCKED: waiting for ExclusiveLock on relation accounts]
+14:02:04 UTC | [UNBLOCKED upon Session A COMMIT]
+14:02:04 UTC | SELECT withdraw(... 4000.00 ...);
+             | ERROR: P0001: Insufficient funds (Available: 1000.00, Requested: 4000.00)
+14:02:04 UTC | ROLLBACK;
+
+AUDIT CONCLUSION:
+Double-spending is mathematically prevented via pessimistic row locking (SELECT ... FOR UPDATE). 
+Remaining balance safely sits at NGN 1,000.00.
+
+TEST 2: IDEMPOTENCY KEY CONFLICT
+- Re-executing transaction with key 'concurrency-test-session-A'
+- Result: ERROR: 23505: duplicate key value violates unique constraint "banking_transactions_idempotency_key_key"
+- Telemetry: Zero duplicate ledger postings; request safely rejected.

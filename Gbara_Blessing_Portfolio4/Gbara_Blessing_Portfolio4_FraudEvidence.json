@@ -1,0 +1,502 @@
+[
+  {
+    "_id": "alert-000",
+    "schemaVersion": 1,
+    "customerRef": "cust-0001",
+    "accountRef": "acc-0001",
+    "transactionRef": "tx-00000",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-01T10:15:00Z",
+    "severity": "LOW",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 5000.0,
+      "deviceRiskScore": 0.4,
+      "recentAttempts": 1
+    }
+  },
+  {
+    "_id": "alert-001",
+    "schemaVersion": 1,
+    "customerRef": "cust-0002",
+    "accountRef": "acc-0002",
+    "transactionRef": "tx-00001",
+    "channel": "USSD",
+    "observedAt": "2026-11-02T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 10000.0,
+      "deviceRiskScore": 0.42,
+      "recentAttempts": 2
+    }
+  },
+  {
+    "_id": "alert-002",
+    "schemaVersion": 1,
+    "customerRef": "cust-0003",
+    "accountRef": "acc-0003",
+    "transactionRef": "tx-00002",
+    "channel": "WEB",
+    "observedAt": "2026-11-03T10:15:00Z",
+    "severity": "HIGH",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 15000.0,
+      "deviceRiskScore": 0.44,
+      "recentAttempts": 3
+    }
+  },
+  {
+    "_id": "alert-003",
+    "schemaVersion": 1,
+    "customerRef": "cust-0004",
+    "accountRef": "acc-0004",
+    "transactionRef": "tx-00003",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-04T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 20000.0,
+      "deviceRiskScore": 0.46,
+      "recentAttempts": 4
+    }
+  },
+  {
+    "_id": "alert-004",
+    "schemaVersion": 1,
+    "customerRef": "cust-0005",
+    "accountRef": "acc-0005",
+    "transactionRef": "tx-00004",
+    "channel": "USSD",
+    "observedAt": "2026-11-05T10:15:00Z",
+    "severity": "LOW",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 25000.0,
+      "deviceRiskScore": 0.48,
+      "recentAttempts": 5
+    }
+  },
+  {
+    "_id": "alert-005",
+    "schemaVersion": 1,
+    "customerRef": "cust-0006",
+    "accountRef": "acc-0006",
+    "transactionRef": "tx-00005",
+    "channel": "WEB",
+    "observedAt": "2026-11-06T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 30000.0,
+      "deviceRiskScore": 0.5,
+      "recentAttempts": 6
+    }
+  },
+  {
+    "_id": "alert-006",
+    "schemaVersion": 1,
+    "customerRef": "cust-0007",
+    "accountRef": "acc-0007",
+    "transactionRef": "tx-00006",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-07T10:15:00Z",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 35000.0,
+      "deviceRiskScore": 0.52,
+      "recentAttempts": 7
+    }
+  },
+  {
+    "_id": "alert-007",
+    "schemaVersion": 1,
+    "customerRef": "cust-0008",
+    "accountRef": "acc-0008",
+    "transactionRef": "tx-00007",
+    "channel": "USSD",
+    "observedAt": "2026-11-08T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 40000.0,
+      "deviceRiskScore": 0.54,
+      "recentAttempts": 1
+    }
+  },
+  {
+    "_id": "alert-008",
+    "schemaVersion": 1,
+    "customerRef": "cust-0009",
+    "accountRef": "acc-0009",
+    "transactionRef": "tx-00008",
+    "channel": "WEB",
+    "observedAt": "2026-11-09T10:15:00Z",
+    "severity": "LOW",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 45000.0,
+      "deviceRiskScore": 0.56,
+      "recentAttempts": 2
+    }
+  },
+  {
+    "_id": "alert-009",
+    "schemaVersion": 1,
+    "customerRef": "cust-0010",
+    "accountRef": "acc-0010",
+    "transactionRef": "tx-00009",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-10T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 50000.0,
+      "deviceRiskScore": 0.58,
+      "recentAttempts": 3
+    }
+  },
+  {
+    "_id": "alert-010",
+    "schemaVersion": 1,
+    "customerRef": "cust-0011",
+    "accountRef": "acc-0011",
+    "transactionRef": "tx-00010",
+    "channel": "USSD",
+    "observedAt": "2026-11-11T10:15:00Z",
+    "severity": "HIGH",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 55000.0,
+      "deviceRiskScore": 0.6,
+      "recentAttempts": 4
+    }
+  },
+  {
+    "_id": "alert-011",
+    "schemaVersion": 1,
+    "customerRef": "cust-0012",
+    "accountRef": "acc-0012",
+    "transactionRef": "tx-00011",
+    "channel": "WEB",
+    "observedAt": "2026-11-12T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 60000.0,
+      "deviceRiskScore": 0.62,
+      "recentAttempts": 5
+    }
+  },
+  {
+    "_id": "alert-012",
+    "schemaVersion": 1,
+    "customerRef": "cust-0013",
+    "accountRef": "acc-0013",
+    "transactionRef": "tx-00012",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-13T10:15:00Z",
+    "severity": "LOW",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 65000.0,
+      "deviceRiskScore": 0.64,
+      "recentAttempts": 6
+    }
+  },
+  {
+    "_id": "alert-013",
+    "schemaVersion": 1,
+    "customerRef": "cust-0014",
+    "accountRef": "acc-0014",
+    "transactionRef": "tx-00013",
+    "channel": "USSD",
+    "observedAt": "2026-11-14T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 70000.0,
+      "deviceRiskScore": 0.66,
+      "recentAttempts": 7
+    }
+  },
+  {
+    "_id": "alert-014",
+    "schemaVersion": 1,
+    "customerRef": "cust-0015",
+    "accountRef": "acc-0015",
+    "transactionRef": "tx-00014",
+    "channel": "WEB",
+    "observedAt": "2026-11-15T10:15:00Z",
+    "severity": "HIGH",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 75000.0,
+      "deviceRiskScore": 0.68,
+      "recentAttempts": 1
+    }
+  },
+  {
+    "_id": "alert-015",
+    "schemaVersion": 1,
+    "customerRef": "cust-0016",
+    "accountRef": "acc-0016",
+    "transactionRef": "tx-00015",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-16T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 80000.0,
+      "deviceRiskScore": 0.7,
+      "recentAttempts": 2
+    }
+  },
+  {
+    "_id": "alert-016",
+    "schemaVersion": 1,
+    "customerRef": "cust-0017",
+    "accountRef": "acc-0017",
+    "transactionRef": "tx-00016",
+    "channel": "USSD",
+    "observedAt": "2026-11-17T10:15:00Z",
+    "severity": "LOW",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 85000.0,
+      "deviceRiskScore": 0.72,
+      "recentAttempts": 3
+    }
+  },
+  {
+    "_id": "alert-017",
+    "schemaVersion": 1,
+    "customerRef": "cust-0018",
+    "accountRef": "acc-0018",
+    "transactionRef": "tx-00017",
+    "channel": "WEB",
+    "observedAt": "2026-11-18T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 90000.0,
+      "deviceRiskScore": 0.74,
+      "recentAttempts": 4
+    }
+  },
+  {
+    "_id": "alert-018",
+    "schemaVersion": 1,
+    "customerRef": "cust-0019",
+    "accountRef": "acc-0019",
+    "transactionRef": "tx-00018",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-19T10:15:00Z",
+    "severity": "HIGH",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 95000.0,
+      "deviceRiskScore": 0.76,
+      "recentAttempts": 5
+    }
+  },
+  {
+    "_id": "alert-019",
+    "schemaVersion": 1,
+    "customerRef": "cust-0020",
+    "accountRef": "acc-0020",
+    "transactionRef": "tx-00019",
+    "channel": "USSD",
+    "observedAt": "2026-11-20T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 100000.0,
+      "deviceRiskScore": 0.78,
+      "recentAttempts": 6
+    }
+  },
+  {
+    "_id": "alert-020",
+    "schemaVersion": 1,
+    "customerRef": "cust-0021",
+    "accountRef": "acc-0021",
+    "transactionRef": "tx-00020",
+    "channel": "WEB",
+    "observedAt": "2026-11-21T10:15:00Z",
+    "severity": "LOW",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 105000.0,
+      "deviceRiskScore": 0.8,
+      "recentAttempts": 7
+    }
+  },
+  {
+    "_id": "alert-021",
+    "schemaVersion": 1,
+    "customerRef": "cust-0022",
+    "accountRef": "acc-0022",
+    "transactionRef": "tx-00021",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-22T10:15:00Z",
+    "severity": "MEDIUM",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 110000.0,
+      "deviceRiskScore": 0.82,
+      "recentAttempts": 1
+    }
+  },
+  {
+    "_id": "alert-022",
+    "schemaVersion": 1,
+    "customerRef": "cust-0023",
+    "accountRef": "acc-0023",
+    "transactionRef": "tx-00022",
+    "channel": "USSD",
+    "observedAt": "2026-11-23T10:15:00Z",
+    "severity": "HIGH",
+    "status": "INVESTIGATING",
+    "rule": {
+      "code": "UNUSUAL_GEO",
+      "version": 2
+    },
+    "features": {
+      "amount": 115000.0,
+      "deviceRiskScore": 0.84,
+      "recentAttempts": 2
+    }
+  },
+  {
+    "_id": "alert-023",
+    "schemaVersion": 1,
+    "customerRef": "cust-0024",
+    "accountRef": "acc-0024",
+    "transactionRef": "tx-00023",
+    "channel": "WEB",
+    "observedAt": "2026-11-24T10:15:00Z",
+    "severity": "CRITICAL",
+    "status": "RESOLVED",
+    "rule": {
+      "code": "HIGH_VALUE_FIRST_TIME",
+      "version": 2
+    },
+    "features": {
+      "amount": 120000.0,
+      "deviceRiskScore": 0.86,
+      "recentAttempts": 3
+    }
+  },
+  {
+    "_id": "alert-024",
+    "schemaVersion": 1,
+    "customerRef": "cust-0025",
+    "accountRef": "acc-0025",
+    "transactionRef": "tx-00024",
+    "channel": "MOBILE",
+    "observedAt": "2026-11-25T10:15:00Z",
+    "severity": "LOW",
+    "status": "OPEN",
+    "rule": {
+      "code": "VELOCITY_5M",
+      "version": 2
+    },
+    "features": {
+      "amount": 125000.0,
+      "deviceRiskScore": 0.88,
+      "recentAttempts": 4
+    }
+  }
+]

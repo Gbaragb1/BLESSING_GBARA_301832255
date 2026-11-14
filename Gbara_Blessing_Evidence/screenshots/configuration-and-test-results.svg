@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2420" viewBox="0 0 1600 2420" role="img" aria-labelledby="title desc">
+  <title id="title">PayBridge configuration files and test results</title>
+  <desc id="desc">Screenshot-style evidence sheet showing redacted PostgreSQL configuration excerpts and repository test-result excerpts.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0b1020; }
+      .panel { fill: #111827; stroke: #334155; stroke-width: 2; }
+      .head { fill: #1e293b; }
+      .title { fill: #f8fafc; font: 700 30px Arial, sans-serif; }
+      .subtitle { fill: #94a3b8; font: 17px Arial, sans-serif; }
+      .label { fill: #7dd3fc; font: 700 21px Arial, sans-serif; }
+      .code { fill: #e2e8f0; font: 17px 'Courier New', monospace; }
+      .muted { fill: #94a3b8; font: 15px Arial, sans-serif; }
+      .green { fill: #86efac; font: 17px 'Courier New', monospace; }
+      .yellow { fill: #fde68a; font: 17px 'Courier New', monospace; }
+      .redact { fill: #fca5a5; font: 17px 'Courier New', monospace; }
+    </style>
+  </defs>
+  <rect class="bg" width="1600" height="2420"/>
+  <text class="title" x="60" y="58">PAYBRIDGE — CONFIGURATION &amp; TEST EVIDENCE</text>
+  <text class="subtitle" x="60" y="91">Repository: Gbaragb1/BLESSING_GBARA_301832255 · Evidence snapshot · 14 Nov 2026</text>
+  <text class="subtitle" x="60" y="119">Credentials intentionally redacted in this image.</text>
+
+  <rect class="panel" x="50" y="150" width="735" height="440" rx="12"/>
+  <rect class="head" x="50" y="150" width="735" height="54" rx="12"/>
+  <text class="label" x="76" y="185">PostgreSQL Primary Configuration</text>
+  <text class="muted" x="76" y="228">Gbara_Blessing_Portfolio5_Primary.conf</text>
+  <text class="code" x="76" y="270">listen_addresses = '*'</text>
+  <text class="code" x="76" y="300">port = 5432</text>
+  <text class="code" x="76" y="330">max_connections = 200</text>
+  <text class="code" x="76" y="375"># WAL &amp; replication</text>
+  <text class="code" x="76" y="405">wal_level = replica</text>
+  <text class="code" x="76" y="435">max_wal_size = 10GB</text>
+  <text class="code" x="76" y="465">archive_mode = on</text>
+  <text class="code" x="76" y="510">max_wal_senders = 10</text>
+  <text class="code" x="76" y="540">synchronous_commit = on</text>
+  <text class="code" x="76" y="570">synchronous_standby_names = 'FIRST 1 (abuja_standby)'</text>
+
+  <rect class="panel" x="815" y="150" width="735" height="440" rx="12"/>
+  <rect class="head" x="815" y="150" width="735" height="54" rx="12"/>
+  <text class="label" x="841" y="185">PostgreSQL Standby Configuration</text>
+  <text class="muted" x="841" y="228">Gbara_Blessing_Portfolio5_Standby.conf</text>
+  <text class="code" x="841" y="270">listen_addresses = '*'</text>
+  <text class="code" x="841" y="300">port = 5432</text>
+  <text class="code" x="841" y="330">hot_standby = on</text>
+  <text class="code" x="841" y="360">max_standby_streaming_delay = 30s</text>
+  <text class="code" x="841" y="390">wal_receiver_timeout = 60s</text>
+  <text class="code" x="841" y="435">primary_conninfo = 'host=lagos-primary...'</text>
+  <text class="redact" x="841" y="465">user=rep_user password=[REDACTED]</text>
+  <text class="code" x="841" y="510">primary_slot_name = 'abuja_standby_slot'</text>
+  <text class="muted" x="841" y="558">Secret value omitted to avoid publishing credentials.</text>
+
+  <rect class="panel" x="50" y="620" width="1500" height="350" rx="12"/>
+  <rect class="head" x="50" y="620" width="1500" height="54" rx="12"/>
+  <text class="label" x="76" y="655">Portfolio 1 — Database Deployment &amp; Constraint Testing</text>
+  <text class="muted" x="76" y="699">Database testing report · PostgreSQL 15+</text>
+  <text class="green" x="76" y="740">customers             2,000 rows   PASS</text>
+  <text class="green" x="76" y="770">app_users              2,050 rows   PASS</text>
+  <text class="green" x="76" y="800">ledger_accounts        2,669 rows   PASS</text>
+  <text class="green" x="76" y="830">accounts               2,666 rows   PASS</text>
+  <text class="green" x="76" y="860">banking_transactions 150,000 rows   PASS</text>
+  <text class="green" x="76" y="890">ledger_entries       300,000 rows   PASS</text>
+  <text class="yellow" x="76" y="930">Negative tests: invalid account format, negative amount, and unbalanced journal rejected.</text>
+
+  <rect class="panel" x="50" y="1000" width="735" height="460" rx="12"/>
+  <rect class="head" x="50" y="1000" width="735" height="54" rx="12"/>
+  <text class="label" x="76" y="1035">Portfolio 3 — Concurrency &amp; Transactions</text>
+  <text class="muted" x="76" y="1078">Execution logs · double-spend and idempotency tests</text>
+  <text class="code" x="76" y="1125">Initial balance: NGN 5,000</text>
+  <text class="code" x="76" y="1155">Session A withdraws NGN 4,000 → SUCCESS</text>
+  <text class="code" x="76" y="1185">Session B waits on row lock, then:</text>
+  <text class="yellow" x="96" y="1215">ERROR: insufficient funds (available NGN 1,000)</text>
+  <text class="green" x="76" y="1265">Conclusion: double-spend prevented by SELECT ... FOR UPDATE.</text>
+  <text class="code" x="76" y="1315">Repeated idempotency key:</text>
+  <text class="yellow" x="96" y="1345">duplicate key rejected; zero duplicate ledger postings.</text>
+  <text class="muted" x="76" y="1410">Reported outcomes transcribed from the committed execution log.</text>
+
+  <rect class="panel" x="815" y="1000" width="735" height="460" rx="12"/>
+  <rect class="head" x="815" y="1000" width="735" height="54" rx="12"/>
+  <text class="label" x="841" y="1035">Portfolio 4 — Aggregation Verification</text>
+  <text class="muted" x="841" y="1078">Execution results · 25 synthetic fraud alert documents</text>
+  <text class="code" x="841" y="1125">High/critical alerts grouped by channel:</text>
+  <text class="green" x="861" y="1165">USSD    5 alerts   NGN 325,000 flagged</text>
+  <text class="green" x="861" y="1200">WEB     4 alerts   NGN 260,000 flagged</text>
+  <text class="green" x="861" y="1235">MOBILE  3 alerts   NGN 225,000 flagged</text>
+  <text class="code" x="841" y="1295">VELOCITY_5M resolution statuses:</text>
+  <text class="code" x="861" y="1335">OPEN: 3 · INVESTIGATING: 3 · RESOLVED: 3</text>
+  <text class="green" x="841" y="1395">MQL aggregation pipelines: completed with zero reported errors.</text>
+
+  <rect class="panel" x="50" y="1490" width="1500" height="490" rx="12"/>
+  <rect class="head" x="50" y="1490" width="1500" height="54" rx="12"/>
+  <text class="label" x="76" y="1525">Portfolio 5 — Distributed 2PC &amp; Sharding Simulation</text>
+  <text class="muted" x="76" y="1569">Execution logs · two shards: Lagos and Abuja</text>
+  <text class="code" x="76" y="1615">Starting balances: ACC-001 NGN 25,000 · ACC-002 NGN 5,000</text>
+  <text class="green" x="76" y="1660">Scenario 1 — NGN 5,000 cross-shard transfer: both shards prepared and committed.</text>
+  <text class="code" x="96" y="1695">Updated: ACC-001 NGN 20,000 · ACC-002 NGN 10,000</text>
+  <text class="yellow" x="76" y="1750">Scenario 2 — NGN 50,000 overdraw: prepare rejected for insufficient funds.</text>
+  <text class="code" x="96" y="1785">Coordinator aborted; rollback preserved both balances.</text>
+  <text class="green" x="76" y="1840">Log conclusion: 2PC simulation reports atomicity verified.</text>
+  <text class="muted" x="76" y="1910">This image summarizes repository-provided logs; it does not independently execute the tests.</text>
+
+  <text class="subtitle" x="60" y="2030">Source files: Portfolio5 Primary.conf / Standby.conf; Portfolio1 Database Testing Report;</text>
+  <text class="subtitle" x="60" y="2060">Portfolio3 Execution Logs; Portfolio4 Execution Results; Portfolio5 Execution Logs.</text>
+  <text class="muted" x="60" y="2115">Screenshot-style composite prepared from repository text evidence. Configuration secret redacted.</text>
+</svg>

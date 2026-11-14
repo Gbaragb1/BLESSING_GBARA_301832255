@@ -17,20 +17,8 @@ A practical PostgreSQL query-planning and performance-analysis guide for account
 
 ## Portfolio 3 — Transactions and Concurrency
 
-Transaction boundaries, ACID properties, isolation choices, locking, idempotency, reversal safety, and a two-session concurrency test lab for the PayBridge PostgreSQL model.
+The sole Portfolio 3 topic: transaction boundaries, ACID properties, isolation choices, locking, idempotency, reversal safety, and a two-session concurrency test lab for the PayBridge PostgreSQL model.
 
 - [Read Portfolio 3: Transactions and Concurrency](portfolio/portfolio-3-transactions-and-concurrency.md)
-
-## Portfolio 4 — NoSQL and Advanced Data Models
-
-A polyglot-persistence design that keeps the financial ledger relational and considers document, key-value, and analytical models for fraud evidence and read projections.
-
-- [Read Portfolio 4: NoSQL and Advanced Data Models](portfolio/portfolio-4-nosql-and-advanced-data-models.md)
-
-## Portfolio 5 — Distributed and Cloud Database Exercise
-
-A cloud-style architecture and reliability exercise covering primary/replica roles, consistency, backup and recovery, event delivery, security controls, failure cases, and a local tabletop lab. No cloud resources are provisioned.
-
-- [Read Portfolio 5: Distributed and Cloud Database Exercise](portfolio/portfolio-5-distributed-and-cloud-database-exercise.md)
 
 **Demo scale:** 2,000 synthetic customers, 2,666 accounts, and 300,000 synthetic ledger entries. Educational simulation only; not a production banking core.

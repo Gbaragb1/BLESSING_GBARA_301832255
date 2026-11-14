@@ -2,7 +2,7 @@
 
 ## Project context
 
-PayBridge is a simulated Nigerian digital bank. Its PostgreSQL prototype supports deposits, withdrawals, peer-to-peer transfers, and compensating reversals using a double-entry ledger. This portfolio examines how transaction boundaries, isolation, row locking, retries, and idempotency protect correctness when multiple requests run concurrently.
+PayBridge is a simulated Nigerian digital bank. Its PostgreSQL prototype supports deposits, withdrawals, peer-to-peer transfers, and compensating reversals using a double-entry ledger. This portfolio focuses on transaction correctness and concurrency; it replaces the previous combined Portfolio 3–5 topic listing.
 
 **Related implementation:** [`database/schema.sql`](../database/schema.sql).  
 **Scope:** educational exercise only; it is not certified or suitable as a production banking core.

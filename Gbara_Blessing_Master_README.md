@@ -8,7 +8,7 @@
 **Student ID:** 301832255  
 **Total Assessment Marks:** 40 Marks (Complete Submission)  
 **Primary Database Engine:** PostgreSQL 15+ (pgcrypto, double-entry ledger, deferred triggers)  
-**GitHub Repository:** `https://github.com/Gbaragb1/BLESSING_GBARA_301832255`  
+**GitHub Repository:** `https://github.com/winnerbanjo/Gbara_Blessing_301832255`  
 
 ---
 

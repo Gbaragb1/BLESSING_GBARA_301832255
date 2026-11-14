@@ -13,7 +13,7 @@ STUDENT INFORMATION:
 - Submission Date: November 2026
 - Case Study:     PayBridge — Simulated Nigerian Digital Bank & Payments Platform
 - Primary Database: PostgreSQL 15+ (pgcrypto, deferred triggers, double-entry ledger)
-- GitHub Repo:    https://github.com/winnerbanjo/Gbara_Blessing_301832255
+- GitHub Repo:    https://github.com/Gbaragb1/BLESSING_GBARA_301832255
 
 ================================================================================
 TABLE OF CONTENTS
